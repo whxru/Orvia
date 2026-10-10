@@ -1,0 +1,230 @@
+{
+  "applicationGroups": [
+    {
+      "applications": [
+        {
+          "bundleIdentifier": "test.group.a",
+          "name": "Editor A"
+        }
+      ],
+      "id": "52763947-351A-48C1-8B53-C23898C45B87",
+      "name": "编辑器",
+      "wheel": {
+        "onRelease": false,
+        "rotation": 1.2,
+        "slots": [
+          {
+            "action": {
+              "type": "binding",
+              "value": "copy"
+            },
+            "appearance": {
+              "showIcon": true,
+              "showName": true
+            }
+          },
+          {
+            "action": {
+              "type": "binding",
+              "value": "paste"
+            },
+            "appearance": {
+              "showIcon": true,
+              "showName": true
+            }
+          }
+        ]
+      },
+      "matchMode": "all",
+      "scenes": []
+    },
+    {
+      "applications": [
+        {
+          "bundleIdentifier": "com.apple.Terminal",
+          "name": "终端"
+        }
+      ],
+      "id": "terminal-text-example",
+      "name": "终端输入",
+      "wheel": {
+        "onRelease": false,
+        "rotation": 1.2,
+        "slots": [
+          {
+            "action": {
+              "type": "binding",
+              "value": "copy"
+            },
+            "appearance": {
+              "showIcon": true,
+              "showName": true
+            }
+          }
+        ]
+      },
+      "matchMode": "all",
+      "scenes": [
+        "textInput"
+      ]
+    },
+    {
+      "applications": [],
+      "id": "general-text-example",
+      "name": "通用文本输入",
+      "wheel": {
+        "onRelease": true,
+        "rotation": 2.25,
+        "slots": [
+          {
+            "action": {
+              "type": "binding",
+              "value": "clearText"
+            },
+            "appearance": {
+              "icon": "keyboard",
+              "name": "Slot 0",
+              "showIcon": false,
+              "showName": true,
+              "trigger": "onRelease"
+            }
+          },
+          {
+            "action": {
+              "type": "binding",
+              "value": "virtualKeyboard"
+            },
+            "appearance": {
+              "icon": "keyboard",
+              "name": "Slot 1",
+              "showIcon": true,
+              "showName": false,
+              "trigger": "onRelease"
+            }
+          }
+        ]
+      },
+      "matchMode": "all",
+      "scenes": [
+        "textInput"
+      ]
+    }
+  ],
+  "format": "magic-wheel-settings",
+  "global": {
+    "onRelease": true,
+    "rotation": 2.25,
+    "slots": [
+      {
+        "action": {
+          "type": "binding",
+          "value": "return"
+        },
+        "appearance": {
+          "icon": "keyboard",
+          "name": "Slot 0",
+          "showIcon": false,
+          "showName": true,
+          "trigger": "onRelease"
+        }
+      },
+      {
+        "action": {
+          "key": {
+            "flags": 524352,
+            "key": 61,
+            "label": "右 Option",
+            "modifier": true
+          },
+          "type": "key"
+        },
+        "appearance": {
+          "icon": "keyboard",
+          "name": "Slot 1",
+          "showIcon": true,
+          "showName": false,
+          "trigger": "onRelease"
+        }
+      },
+      {
+        "action": {
+          "type": "text",
+          "value": "Hello\n世界🙂",
+          "sendReturn": true
+        },
+        "appearance": {
+          "icon": "keyboard",
+          "name": "Slot 2",
+          "showIcon": false,
+          "showName": true,
+          "trigger": "onRelease"
+        }
+      },
+      {
+        "action": {
+          "type": "text",
+          "value": ""
+        },
+        "appearance": {
+          "icon": "keyboard",
+          "name": "Slot 3",
+          "showIcon": true,
+          "showName": false,
+          "trigger": "onRelease"
+        }
+      },
+      {
+        "action": {
+          "shortcut": {
+            "identifier": "7E42B2A6-580A-4B58-8E1B-95B913533650",
+            "name": "清空 (当前) 输入框 🙂"
+          },
+          "type": "shortcut"
+        },
+        "appearance": {
+          "icon": "keyboard",
+          "name": "Slot 4",
+          "showIcon": false,
+          "showName": true,
+          "trigger": "onRelease"
+        }
+      },
+      {
+        "action": {
+          "type": "binding",
+          "value": ""
+        },
+        "appearance": {
+          "icon": "keyboard",
+          "name": "Slot 5",
+          "showIcon": true,
+          "showName": false,
+          "trigger": "onRelease"
+        }
+      },
+      {
+        "action": {
+          "type": "binding",
+          "value": "command+f1"
+        },
+        "appearance": {
+          "icon": "keyboard",
+          "name": "Slot 6",
+          "showIcon": false,
+          "showName": true,
+          "trigger": "onRelease"
+        }
+      }
+    ]
+  },
+  "preferences": {
+    "enabled": false,
+    "holdSeconds": 0.65,
+    "language": "en",
+    "launchAtLogin": true,
+    "theme": "glass",
+    "travel": 0.2
+  },
+  "scenes": [],
+  "version": 3
+}

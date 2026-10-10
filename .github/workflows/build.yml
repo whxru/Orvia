@@ -1,0 +1,30 @@
+name: Build and test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test core behavior
+        run: bash Source/test.sh
+      - name: Build and package
+        run: bash Source/package.sh
+      - name: Upload app and checksum
+        uses: actions/upload-artifact@v4
+        with:
+          name: Orvia-macos-arm64
+          path: |
+            outputs/release/*.zip
+            outputs/release/*.sha256
+          if-no-files-found: error

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleExecutable</key><string>Orvia</string>
+    <key>CFBundleIdentifier</key><string>local.magicwheel.app</string>
+    <key>CFBundleName</key><string>Orvia</string>
+    <key>CFBundleDisplayName</key><string>Orvia</string>
+    <key>CFBundleVersion</key><string>41</string>
+    <key>CFBundleShortVersionString</key><string>0.21.1</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleIconFile</key><string>Orvia</string>
+    <key>LSUIElement</key><true/>
+    <key>LSMinimumSystemVersion</key><string>13.0</string>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>NSPrincipalClass</key><string>NSApplication</string>
+</dict>
+</plist>

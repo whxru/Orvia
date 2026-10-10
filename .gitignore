@@ -1,0 +1,20 @@
+.DS_Store
+# Local builds, release archives, and development scratch files.
+outputs/
+work/
+build/
+DerivedData/
+*.app/
+*.zip
+*.dSYM/
+*.log
+.build/
+.swiftpm/
+xcuserdata/
+# Local configuration and signing material.
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.mobileprovision

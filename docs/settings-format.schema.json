@@ -1,0 +1,408 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Orvia Settings v1 / v2 / v3",
+  "description": "Portable complete settings. Cross-field constraints and migration rules are specified in the accompanying format document.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "magic-wheel-settings"
+    },
+    "version": {
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "preferences": {
+      "$ref": "#/$defs/preferences"
+    },
+    "global": {
+      "$ref": "#/$defs/wheel"
+    },
+    "applicationGroups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/group"
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/scene"
+      }
+    }
+  },
+  "required": [
+    "format",
+    "version",
+    "preferences",
+    "global",
+    "applicationGroups",
+    "scenes"
+  ],
+  "$defs": {
+    "appearance": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "icon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "showName": {
+          "type": "boolean"
+        },
+        "showIcon": {
+          "type": "boolean"
+        },
+        "trigger": {
+          "enum": [
+            "onEntry",
+            "onRelease",
+            "whileInside",
+            null
+          ]
+        }
+      },
+      "required": [
+        "showName",
+        "showIcon"
+      ]
+    },
+    "key": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 127
+        },
+        "flags": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 18446744073709551615
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "modifier": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "key",
+        "flags",
+        "label",
+        "modifier"
+      ]
+    },
+    "shortcut": {
+      "type": "object",
+      "properties": {
+        "identifier": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "identifier",
+        "name"
+      ]
+    },
+    "action": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "binding"
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^(?!(recorded:|text:|text-enter:|mac-shortcut:))"
+            },
+            "key": {
+              "type": "null"
+            },
+            "shortcut": {
+              "type": "null"
+            },
+            "sendReturn": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "text"
+            },
+            "sendReturn": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "null"
+            },
+            "shortcut": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "key"
+            },
+            "key": {
+              "$ref": "#/$defs/key"
+            },
+            "value": {
+              "type": "null"
+            },
+            "shortcut": {
+              "type": "null"
+            },
+            "sendReturn": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "type",
+            "key"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "shortcut"
+            },
+            "shortcut": {
+              "$ref": "#/$defs/shortcut"
+            },
+            "value": {
+              "type": "null"
+            },
+            "key": {
+              "type": "null"
+            },
+            "sendReturn": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "type",
+            "shortcut"
+          ]
+        }
+      ]
+    },
+    "slot": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "$ref": "#/$defs/action"
+        },
+        "appearance": {
+          "$ref": "#/$defs/appearance"
+        }
+      },
+      "required": [
+        "action",
+        "appearance"
+      ]
+    },
+    "wheel": {
+      "type": "object",
+      "properties": {
+        "rotation": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMaximum": 6.283185307179586
+        },
+        "onRelease": {
+          "type": "boolean"
+        },
+        "slots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/slot"
+          }
+        }
+      },
+      "required": [
+        "rotation",
+        "onRelease",
+        "slots"
+      ]
+    },
+    "application": {
+      "type": "object",
+      "properties": {
+        "bundleIdentifier": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\S+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "bundleIdentifier",
+        "name"
+      ]
+    },
+    "group": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "name": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "applications": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/application"
+          }
+        },
+        "wheel": {
+          "$ref": "#/$defs/wheel"
+        },
+        "scenes": {
+          "type": "array",
+          "items": {
+            "const": "textInput"
+          },
+          "uniqueItems": true
+        },
+        "matchMode": {
+          "enum": [
+            "all",
+            "any"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "applications",
+        "wheel"
+      ],
+      "anyOf": [
+        {
+          "properties": {
+            "applications": {
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "required": [
+            "scenes"
+          ],
+          "properties": {
+            "scenes": {
+              "minItems": 1
+            }
+          }
+        }
+      ]
+    },
+    "scene": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "const": "textInput"
+        },
+        "wheel": {
+          "$ref": "#/$defs/wheel"
+        }
+      },
+      "required": [
+        "id",
+        "wheel"
+      ]
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "enum": [
+            "zh-Hans",
+            "en"
+          ]
+        },
+        "theme": {
+          "description": "Exports use minimal or glass. Retired frosted, gta, cyberpunk and colorful values import as glass.",
+          "enum": [
+            "minimal",
+            "glass",
+            "frosted",
+            "gta",
+            "cyberpunk",
+            "colorful"
+          ]
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "holdSeconds": {
+          "type": "number",
+          "minimum": 0.3,
+          "maximum": 1.2
+        },
+        "travel": {
+          "type": "number",
+          "minimum": 0.07,
+          "maximum": 0.25
+        },
+        "launchAtLogin": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "language",
+        "theme",
+        "enabled",
+        "holdSeconds",
+        "travel",
+        "launchAtLogin"
+      ]
+    }
+  }
+}
