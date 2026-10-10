@@ -6,7 +6,7 @@
 <p align="center"><strong>Everyday actions, right on your Magic Trackpad.</strong></p>
 <p align="center">English · <a href="README.md">简体中文</a></p>
 
-https://github.com/user-attachments/assets/e4998c96-6128-473e-bc98-07fbc3015a09
+https://github.com/user-attachments/assets/6980476e-6e6d-4663-9d93-f24b6cb2abb6
 
 Orvia is a customizable action wheel for macOS, for people who Vibe Code with their voice and want to leave the keyboard behind. Rest two fingers on your trackpad to bring it up beside your pointer, slide toward an action, and lift to close. Copy, paste, and your favorite shortcuts are a gesture away—including shortcuts for the voice-input tools you already use.
 

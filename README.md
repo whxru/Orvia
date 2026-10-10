@@ -6,11 +6,9 @@
 <p align="center"><strong>用一块 Magic Trackpad，快速调用常用操作。</strong></p>
 <p align="center">简体中文 · <a href="README.en.md">English</a></p>
 
-http
-
 https://github.com/user-attachments/assets/6980476e-6e6d-4663-9d93-f24b6cb2abb6
 
-ia 是一款 macOS 触控板快捷轮盘，适合想用语音 Vibe Coding、放下键盘的你。双指轻放并长按，轮盘就会出现在鼠标旁；滑向目标选择操作，抬起手指关闭。复制、粘贴和常用快捷键，都可以在触控板上完成，也能更方便地调用你常用的语音输入工具。
+Orvia 是一款 macOS 触控板快捷轮盘，适合想用语音 Vibe Coding、放下键盘的你。双指轻放并长按，轮盘就会出现在鼠标旁；滑向目标选择操作，抬起手指关闭。复制、粘贴和常用快捷键，都可以在触控板上完成，也能更方便地调用你常用的语音输入工具。
 
 ## 功能
 
