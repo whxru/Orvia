@@ -1,6 +1,6 @@
 # Development and release guide
 
-[English README](../README.md) · [中文首页](../README.zh-CN.md)
+[English README](../README.en.md) · [中文首页](../README.md)
 
 ## Build
 

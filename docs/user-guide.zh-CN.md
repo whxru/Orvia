@@ -1,6 +1,6 @@
 # Orvia 使用指南
 
-[返回首页](../README.zh-CN.md) · [English overview](../README.md)
+[返回首页](../README.md) · [English overview](../README.en.md)
 
 ## 唤出、选择和结束
 

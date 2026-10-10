@@ -1,6 +1,6 @@
 # Orvia 设置文件格式 v3（应用版本 0.20.5 起，兼容导入 v1/v2）
 
-[返回中文首页](../README.zh-CN.md) · [使用指南](user-guide.zh-CN.md)
+[返回中文首页](../README.md) · [使用指南](user-guide.zh-CN.md)
 
 ## 用途
 
