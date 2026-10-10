@@ -1,6 +1,4 @@
-<video src="docs/assets/orvia-introduction.mp4" controls preload="metadata" width="100%"></video>
-
-[观看 Orvia 介绍视频](docs/assets/orvia-introduction.mp4)
+https://github.com/user-attachments/assets/74c98d23-c27a-4705-9a65-9de948de5f73
 
 <p align="center">
   <img src="Source/Resources/OrviaLogo.png" width="112" alt="Orvia 图标">
