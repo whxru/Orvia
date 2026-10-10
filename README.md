@@ -1,5 +1,3 @@
-https://github.com/user-attachments/assets/e4998c96-6128-473e-bc98-07fbc3015a09
-
 <p align="center">
   <img src="Source/Resources/OrviaLogo.png" width="112" alt="Orvia icon">
 </p>
@@ -8,11 +6,13 @@ https://github.com/user-attachments/assets/e4998c96-6128-473e-bc98-07fbc3015a09
 <p align="center"><strong>Everyday actions, right on your Magic Trackpad.</strong></p>
 <p align="center">English · <a href="README.zh-CN.md">简体中文</a></p>
 
-Orvia is a customizable action wheel for macOS. Vibe Coding with your voice, hands off the keyboard. Rest two fingers on your trackpad to bring it up beside your pointer, slide toward an action, and lift to close. Copy, paste, voice input, and your favorite shortcuts are a gesture away.
+https://github.com/user-attachments/assets/e4998c96-6128-473e-bc98-07fbc3015a09
+
+Orvia is a customizable action wheel for macOS, for people who Vibe Code with their voice and want to leave the keyboard behind. Rest two fingers on your trackpad to bring it up beside your pointer, slide toward an action, and lift to close. Copy, paste, and your favorite shortcuts are a gesture away—including shortcuts for the voice-input tools you already use.
 
 ## Features
 
-- **Quick voice input.** Bring your favorite hold-to-talk input method into the wheel. Bind its voice-input key to a slice, slide in to speak, and lift to finish.
+- **Easy access to your voice-input tools.** Bind your input method or voice tool’s hold-to-talk shortcut to a slice. Slide in to hold the key and lift to release it, so you can dictate with your usual tool without reaching for the keyboard.
 - **Automatic scene switching.** Give each app its own wheel, or create a wheel for typing in text fields. Combine app and text-focus conditions, and share a scene across multiple apps.
 - **Customizable wheels.** Add or remove slices, drag to reorder, rotate the wheel, and choose labels and icons. Actions can run on entry or release; keys can also stay held while you remain inside a slice.
 - **Shortcuts, text, and workflows.** Record key combinations, insert saved phrases, run Apple Shortcuts, or open a floating keyboard. Saved text supports line breaks, emoji, and an optional Enter afterward.
@@ -22,8 +22,8 @@ Orvia is a customizable action wheel for macOS. Vibe Coding with your voice, han
 
 | Context | Example wheel |
 | --- | --- |
-| Coding with AI | Dictate a request, with paste, Return, and editor shortcuts nearby |
-| Messaging | Voice input, saved replies, and line breaks; optionally press Enter after a specific phrase |
+| Coding with AI | Trigger your voice-input tool to dictate a request, with paste, Return, and editor shortcuts nearby |
+| Messaging | Your input method’s voice shortcut, saved replies, and line breaks; optionally press Enter after a specific phrase |
 | Editing documents | Copy, paste, undo, and cursor movement when a text field has focus |
 | Everyday workflows | Launch your Apple Shortcuts directly from the wheel |
 
