@@ -1,7 +1,4 @@
-
-
 https://github.com/user-attachments/assets/e4998c96-6128-473e-bc98-07fbc3015a09
-
 
 <p align="center">
   <img src="Source/Resources/OrviaLogo.png" width="112" alt="Orvia icon">
